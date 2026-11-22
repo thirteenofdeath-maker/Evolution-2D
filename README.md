@@ -8,15 +8,15 @@ After GitHub Pages deployment, visit: https://thirteenofdeath-maker.github.io/Ev
 
 ## Core game loop
 
-1. **SEARCHING:** Start with two creatures. AI searches for weapons and food. Eating food creates an offspring with inherited, slightly mutated DNA.
-2. **BATTLE:** Once the population reaches **10**, food is cleared, combat starts, and AI fights automatically. A shrinking storm encourages decisive fights.
+1. **SEARCHING:** Spawn all 10 competitors at spaced random positions before each round. AI then searches for weapons and food during a 20-second preparation phase. Food gives a small power bonus.
+2. **BATTLE:** After the **20-second preparation phase**, food is cleared, combat starts, and AI fights automatically. A shrinking storm encourages decisive fights.
 3. **WINNER:** The last surviving creature wins and receives permanent HP and Power bonuses.
-4. **NEXT ROUND:** The champion survives into the next round with a fresh opponent. The process repeats.
+4. **NEXT ROUND:** The champion survives and is repositioned to a random spawn in the next round; remaining slots are filled to 10 competitors. The process repeats.
 
 ## Features
 
 - 100% autonomous AI combat with hunting, cautious retreat, weapon range and cooldowns
-- Food, reproduction, mutation, generations and basic traits
+- Food, genetic variation, generations and basic traits (reproduction is currently disabled in this battle-only prototype)
 - Weapons: fist, knife, gun, bow, shield, green weapon
 - Tier progression: Normal → Purple → Fire → Golden through kills
 - Persistent champion from round to round
