@@ -1,19 +1,32 @@
-# Evolution 2D — Living World (Mobile Demo)
+# Evolution 2D — Battle Royale (Mobile Demo)
 
-Mobile-friendly, self-contained HTML/JavaScript evolutionary ecosystem simulation.
+A mobile-browser AI Battle Royale inspired by the original `งู3.py`.
 
 ## Play
-Open [the GitHub Pages site](https://thirteenofdeath-maker.github.io/Evolution-2D/) after enabling Pages for this repository. Alternatively open `index.html` in a browser.
+
+After GitHub Pages deployment, visit: https://thirteenofdeath-maker.github.io/Evolution-2D/
+
+## Core game loop
+
+1. **SEARCHING:** Start with two creatures. AI searches for weapons and food. Eating food creates an offspring with inherited, slightly mutated DNA.
+2. **BATTLE:** Once the population reaches **10**, food is cleared, combat starts, and AI fights automatically. A shrinking storm encourages decisive fights.
+3. **WINNER:** The last surviving creature wins and receives permanent HP and Power bonuses.
+4. **NEXT ROUND:** The champion survives into the next round with a fresh opponent. The process repeats.
 
 ## Features
-- Foragers and predators pursue food, hunt, flee, explore, and reproduce
-- Heritable traits with mutation and generation tracking
-- Terrain, food regrowth, energy, aging, death and a creature inspector
-- Touch pan/zoom, pause, speed controls, local browser save/load
-- No backend; runs locally in the browser
 
-## Caveats
-This is a lightweight mobile **prototype**, not a faithful port of the full Python simulation. It doesn't yet include true A* pathfinding, realistic sexual reproduction, long-term lineage graphs, or balanced predator-prey dynamics. It has not yet undergone on-device iPhone QA.
+- 100% autonomous AI combat with hunting, cautious retreat, weapon range and cooldowns
+- Food, reproduction, mutation, generations and basic traits
+- Weapons: fist, knife, gun, bow, shield, green weapon
+- Tier progression: Normal → Purple → Fire → Golden through kills
+- Persistent champion from round to round
+- Pause, 1×/2×/4×/8× speed, touch pan/zoom, creature inspector
+- Local browser save/load
 
-## GitHub Pages
-In **Settings → Pages**, set **Build and deployment → Deploy from a branch**, choose **main** and **/(root)**, then Save. Your site will be at https://thirteenofdeath-maker.github.io/Evolution-2D/.
+## Limitations
+
+A playable **prototype** rather than a feature-complete port. It doesn't yet reproduce the original game's snake encounters, special gem rules, projectile physics, A* obstacle avoidance, full tier unlock logic or full battle effects. Mobile QA and game balance remain to be verified.
+
+## Deploy
+
+Repository **Settings → Pages → Source: GitHub Actions**. The workflow `.github/workflows/pages.yml` deploys on pushes to `main`.
